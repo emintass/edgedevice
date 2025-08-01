@@ -1,5 +1,5 @@
 import serial
-import datetime
+import time
 
 
 ser = serial.Serial(
@@ -20,4 +20,4 @@ for i in range(10):
         print("Received:", response2.decode(errors='ignore'))
     finally:
         ser.close()
-    sleep(0.5)
+    time.sleep(0.5)
