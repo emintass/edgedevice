@@ -11,9 +11,10 @@ ser = serial.Serial(
 
 try:
     ser.write(b'/?!\r\n')   # Örnek: sayaç kimlik sorgu komutu
-    response = ser.readline()
-    response2 = ser.readline()
-    print("Received:", response.decode(errors='ignore'))
-    print("Received:", response2.decode(errors='ignore'))
+    for i in range(10):
+        response = ser.readline()
+        response2 = ser.readline()
+        print("Received:", response.decode(errors='ignore'))
+        print("Received:", response2.decode(errors='ignore'))
 finally:
     ser.close()
