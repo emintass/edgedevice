@@ -1,4 +1,6 @@
 import serial
+import datetime
+
 
 ser = serial.Serial(
     port='/dev/ttyUSB0',  # adaptörün portu
@@ -18,3 +20,4 @@ for i in range(10):
         print("Received:", response2.decode(errors='ignore'))
     finally:
         ser.close()
+    sleep(0.5)
