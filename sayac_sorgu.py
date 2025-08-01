@@ -18,6 +18,7 @@ for i in range(10):
         response2 = ser.readline()
         print("Received:", response.decode(errors='ignore'))
         print("Received:", response2.decode(errors='ignore'))
+        time.sleep(5)
+    
     finally:
         ser.close()
-    time.sleep(5)
