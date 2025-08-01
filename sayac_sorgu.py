@@ -20,4 +20,4 @@ for i in range(10):
         print("Received:", response2.decode(errors='ignore'))
     finally:
         ser.close()
-    time.sleep(0.5)
+    time.sleep(5)
