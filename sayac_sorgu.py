@@ -9,12 +9,12 @@ ser = serial.Serial(
     timeout=2.0
 )
 
-try:
-    ser.write(b'/?!\r\n')   # Örnek: sayaç kimlik sorgu komutu
-    for i in range(10):
+for i in range(10):
+    try:
+        ser.write(b'/?!\r\n')   # Örnek: sayaç kimlik sorgu komutu
         response = ser.readline()
         response2 = ser.readline()
         print("Received:", response.decode(errors='ignore'))
         print("Received:", response2.decode(errors='ignore'))
-finally:
-    ser.close()
+    finally:
+        ser.close()
