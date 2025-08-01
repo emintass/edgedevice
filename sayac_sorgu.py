@@ -2,8 +2,8 @@ import serial
 
 ser = serial.Serial(
     port='/dev/ttyUSB0',  # adaptörün portu
-    baudrate=9600,
-    bytesize=serial.EIGHTBITS,
+    baudrate=300,
+    bytesize=serial.SEVENBITS,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     timeout=1
